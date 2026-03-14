@@ -26,8 +26,8 @@ const Room: React.FC = () => {
       if (!isMounted) return;
 
       // Generate kit token
-      const appID = 710033215;
-      const serverSecret = "2de29a221ce54c32355acceaa84c00bf";
+      const appID = parseInt(import.meta.env.VITE_ZEGO_APP_ID);
+      const serverSecret = import.meta.env.VITE_ZEGO_SERVER_SECRET;
       const kitToken = ZegoUIKitPrebuilt.generateKitTokenForTest(
         appID,
         serverSecret,
